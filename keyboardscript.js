@@ -8,8 +8,6 @@ var blackDivOS;
 var currentClicked = new Array();
 var guessedCorrectly = 0;
 var numRight = 0, numWrong = 0;
-var chordCboxChecked = true;
-var scaleCboxChecked = false;
 
 function setup() {
     currentGuess[0] = 0;
@@ -52,11 +50,12 @@ function addListeners() {
     }
     // add event listeners for the checkboxes
     document.getElementById("chords").addEventListener("change", function() {
-            chordCboxChecked = !chordCboxChecked;
+            chordCboxChecked = document.getElementById("chords").checked;
             displayChordCboxes();
         });
     document.getElementById("scales").addEventListener("change", function() {
-            scaleCboxChecked = !scaleCboxChecked;
+            scaleCboxChecked = document.getElementById("scales").checked;
+            console.log(scaleCboxChecked);
             displayScaleCboxes();
         });
 }
@@ -92,13 +91,18 @@ function handleNoteClicked(note) {
         key.style.backgroundColor = "Red";
     }
     // check if the chord has been fully guessed correctly
+    var numNotesInChord;
     if(currentGuess[2] == 0) {
-        var numNotesInChord = 3;
+        numNotesInChord = 3;
         if(currentGuess[0] == 1 || currentGuess[0] == 3 || currentGuess[0] == 4)
             numNotesInChord = 4;
     }
-    else 
-        var numNotesInChord = 7;
+    else {
+        if(currentGuess[0] == 2 || currentGuess[0] == 3)
+            numNotesInChord = 6;
+        else
+            numNotesInChord = 7;
+    }
 
     for(let k of currentClicked) {
         if(notesInChord.includes(k)) {
@@ -118,23 +122,23 @@ function handleNoteClicked(note) {
 }
 
 function displayChordCboxes() {
-    if(chordCboxChecked)
+    if(document.getElementById("chords").checked)
         document.getElementById("chordCheckboxDiv").style.display = "block";
     else
         document.getElementById("chordCheckboxDiv").style.display = "none";
     let cboxes = document.getElementById("chordCheckboxDiv").children;
     for(c of cboxes)
-        c.checked = chordCboxChecked;
+        c.checked = document.getElementById("chords").checked;
 }
 
 function displayScaleCboxes() {
-    if(scaleCboxChecked)
+    if(document.getElementById("scales").checked)
         document.getElementById("scaleCheckboxDiv").style.display = "block";
     else
         document.getElementById("scaleCheckboxDiv").style.display = "none";
     let cboxes = document.getElementById("scaleCheckboxDiv").children;
     for(c of cboxes)
-        c.checked = scaleCboxChecked;
+        c.checked = document.getElementById("scales").checked;
 }
 
 
@@ -144,15 +148,15 @@ function chooseNewChordOrScale() {
     guessedCorrectly = 0;
     clearButtonColors();
 
-    if(chordCboxChecked && scaleCboxChecked) { // randomly choose between a chord or a scale
+    if(document.getElementById("chords").checked && document.getElementById("scales").checked) { // randomly choose between a chord or a scale
         if(chooseTrueOrFalse())
             randomlySelectChord();
         else
             randomlySelectScale();
     }
-    else if(chordCboxChecked && !scaleCboxChecked) // choose a chord
+    else if(document.getElementById("chords").checked && !document.getElementById("scales").checked) // choose a chord
         randomlySelectChord();
-    else if(!chordCboxChecked && scaleCboxChecked) // choose a scale
+    else if(!document.getElementById("chords").checked && document.getElementById("scales").checked) // choose a scale
         randomlySelectScale();
 }
 
@@ -165,10 +169,14 @@ function randomlySelectChord() { // randomly select a chord based on checkbox se
 
     let randType = chordTypes[Math.floor(Math.random() * chordTypes.length)];
     let randChord = Math.floor(Math.random() * 11);
+    let oldGuess = [...currentGuess];
     currentGuess[0] = randType;
     currentGuess[1] = randChord;
     currentGuess[2] = 0;
-    document.getElementById("chord").textContent = "Chord: " + convertCurrentChordToReadable();
+    if(oldGuess[0] == currentGuess[0] && oldGuess[1] == currentGuess[1]) // new guess is the same as the old guess, generate a new one
+        randomlySelectChord();
+    else 
+        document.getElementById("chord").textContent = "Chord: " + convertCurrentChordToReadable();
 }
 
 function convertCurrentChordToReadable() { // turn our numbered chord into its actual name
@@ -208,10 +216,14 @@ function randomlySelectScale() {
     }
     let randType = scaleTypes[Math.floor(Math.random() * scaleTypes.length)];
     let randScale = Math.floor(Math.random() * 11);
+    let oldGuess = [...currentGuess];
     currentGuess[0] = randType;
     currentGuess[1] = randScale;
     currentGuess[2] = 1;
-    document.getElementById("chord").textContent = "Scale: " + convertCurrentScaleToReadable();
+    if(oldGuess[0] == currentGuess[0] && oldGuess[1] == currentGuess[1]) // new guess is the same as the old guess, generate a new one
+        randomlySelectScale();
+    else 
+        document.getElementById("chord").textContent = "Scale: " + convertCurrentScaleToReadable();
 }
 
 function convertCurrentScaleToReadable() {
@@ -229,7 +241,7 @@ function convertCurrentScaleToReadable() {
             cLetterAscii++;
         let cLetter = String.fromCharCode(cLetterAscii);
         let flatSymbol = String.fromCharCode(9837); // ascii code for flat symbol
-        secondChordName = cLetter + flatSymbol;
+        secondChordName = cLetter + flatSymbol + " ";
         if(chooseTrueOrFalse())
             return scale + type;
         else
