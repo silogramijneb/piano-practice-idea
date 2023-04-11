@@ -1,0 +1,443 @@
+h1 {
+    transform: translate(0px, -150px);
+    position: fixed;
+    z-index: 0;
+}
+
+h2 {
+    transform: translate(0px, -70px);
+}
+
+#newChordButton {
+    transform: translate(0px, -70px);
+}
+
+
+/**************************x***** ALL BUTTONS FOR WHITE KEYS *******************************/
+
+.white button {
+    background-color: white;
+}
+
+.black button{
+    background-color: black;
+}
+
+#c1 {
+    /* transform: translate(-804px, -158px); */
+    width: 54px;
+    height: 269px;
+    border-color: black;
+    border-width: 2px;
+    position: relative;
+    z-index: 1;
+}
+
+#d1 {
+    transform: translate(-1px, 0px);
+    width: 54px;
+    height: 269px;
+    /* background-color: white; */
+    border-width: 2px;
+    border-color: black;
+    position: relative;
+    z-index: 1;
+    
+}
+
+#e1 {
+    transform: translate(-2px, 0px);
+    width: 54px;
+    height: 269px;
+    /* background-color: white; */
+    border-width: 2px;
+    border-color: black;
+    position: relative;
+    z-index: 1;
+}
+
+#f1 {
+    transform: translate(-3px, 0px);
+    width: 54px;
+    height: 269px;
+    /* background-color: white; */
+    border-width: 2px;
+    border-color: black;
+    position: relative;
+    z-index: 1;
+}
+
+#g1 {
+    transform: translate(-4px, 0px);
+    width: 54px;
+    height: 269px;
+    /* background-color: white; */
+    border-width: 2px;
+    border-color: black;
+    position: relative;
+    z-index: 1;
+}
+
+#a1 {
+    /* transform: translate(-802px, -158px); */
+    transform: translate(-5px, 0px);
+    width: 54px;
+    height: 269px;
+    /* background-color: white; */
+    border-width: 2px;
+    border-color: black;
+    position: relative;
+    z-index: 1;
+}
+
+#b1 {
+    transform: translate(-6px, 0px);
+    width: 54px;
+    height: 269px;
+    /* background-color: white; */
+    border-width: 2px;
+    border-color: black;
+    position: relative;
+    z-index: 1;
+}
+
+#c2 {
+    transform: translate(-7px, 0px);
+    width: 54px;
+    height: 269px;
+    /* background-color: white; */
+    border-width: 2px;
+    border-color: black;
+    position: relative;
+    z-index: 1;
+}
+
+#d2 {
+    transform: translate(-8px, 0px);
+    width: 54px;
+    height: 269px;
+    /* background-color: white; */
+    border-width: 2px;
+    border-color: black;
+    position: relative;
+    z-index: 1;
+}
+
+#e2 {
+    transform: translate(-9px, 0px);
+    width: 54px;
+    height: 269px;
+    /* background-color: white; */
+    border-width: 2px;
+    border-color: black;
+    position: relative;
+    z-index: 1;
+}
+
+#f2 {
+    transform: translate(-10px, 0px);
+    width: 54px;
+    height: 269px;
+    /* background-color: transparent; */
+    border-width: 2px;
+    border-color: black;
+    position: relative;
+    z-index: 1;
+}
+
+#g2 {
+    transform: translate(-11px, 0px);
+    width: 54px;
+    height: 269px;
+    /* background-color: transparent; */
+    border-width: 2px;
+    border-color: black;
+    position: relative;
+    z-index: 1;
+}
+
+#a2 {
+    transform: translate(-12px, 0px);
+    width: 54px;
+    height: 269px;
+    /* background-color: transparent; */
+    border-width: 2px;
+    border-color: black;
+    position: relative;
+    z-index: 1;
+}
+
+#b2 {
+    transform: translate(-13px, 0px);
+    width: 54px;
+    height: 269px;
+    /* background-color: transparent; */
+    border-width: 2px;
+    border-color: black;
+    position: relative;
+    z-index: 1;
+}
+
+#c3 {
+    transform: translate(-14px, 0px);
+    width: 54px;
+    height: 269px;
+    /* background-color: transparent; */
+    border-width: 2px;
+    border-color: black;
+    position: relative;
+    z-index: 1;
+}
+
+#d3 {
+    transform: translate(-15px, 0px);
+    width: 54px;
+    height: 269px;
+    /* background-color: transparent; */
+    border-width: 2px;
+    border-color: black;
+    position: relative;
+    z-index: 1;
+}
+
+#e3 {
+    transform: translate(-16px, 0px);
+    width: 54px;
+    height: 269px;
+    /* background-color: transparent; */
+    border-width: 2px;
+    border-color: black;
+    position: relative;
+    z-index: 1;
+}
+
+#f3 {
+    transform: translate(-17px, 0px);
+    width: 54px;
+    height: 269px;
+    /* background-color: transparent; */
+    border-width: 2px;
+    border-color: black;
+    position: relative;
+    z-index: 1;
+}
+
+#g3 {
+    transform: translate(-18px, 0px);
+    width: 54px;
+    height: 269px;
+    /* background-color: transparent; */
+    border-width: 2px;
+    border-color: black;
+    position: relative;
+    z-index: 1;
+}
+
+#a3 {
+    transform: translate(-19px, 0px);
+    width: 54px;
+    height: 269px;
+    /* background-color: transparent; */
+    border-width: 2px;
+    border-color: black;
+    position: relative;
+    z-index: 1;
+}
+
+#b3 {
+    transform: translate(-20px, 0px);
+    width: 54px;
+    height: 269;
+    /* background-color: transparent; */
+    border-width: 2px;
+    border-color: black;
+    position: relative;
+    z-index: 1;
+} 
+
+/******************************* ALL BUTTONS FOR BLACK KEYS *******************************/
+
+#cs1 {
+    transform: translate(36px, -269px);
+    width: 36px;
+    height: 158px;
+   /* background-color: black; */
+    border-width: 2px;
+    border-color: black;
+    position: relative;
+    z-index: 3;
+}
+
+#ds1 {
+    transform: translate(53px, -269px);
+    width: 36px;
+    height: 158px;
+    /* background-color: black; */
+    border-width: 2px;
+    border-color: black;
+    position: relative;
+    z-index: 3;
+}
+
+#fs1 {
+    transform: translate(122px, -269px);
+    width: 36px;
+    height: 158px;
+    /* background-color: black; */
+    border-width: 2px;
+    border-color: black;
+    position: relative;
+    z-index: 3;
+}
+
+#gs1 {
+    transform: translate(138px, -269px);
+    width: 36px;
+    height: 158px;
+    /* background-color: black; */
+    border-width: 2px;
+    border-color: black;
+    position: relative;
+    z-index: 3;
+}
+
+#as1 {
+    transform: translate(156px, -269px);
+    width: 36px;
+    height: 158px;
+    /* background-color: black; */
+    border-width: 2px;
+    border-color: black;
+    position: relative;
+    z-index: 3;
+}
+
+#cs2 {
+    transform: translate(226px, -269px);
+    width: 36px;
+    height: 158px;
+    /* background-color: black; */
+    border-width: 2px;
+    border-color: black;
+    position: relative;
+    z-index: 3;
+}
+
+#ds2 {
+    transform: translate(242px, -269px);
+    width: 36px;
+    height: 158px;
+    /* background-color: black; */
+    border-width: 2px;
+    border-color: black;
+    position: relative;
+    z-index: 3;
+}
+
+#fs2 {
+    transform: translate(312px, -269px);
+    width: 36px;
+    height: 158px;
+    /* background-color: black; */
+    border-width: 2px;
+    border-color: black;
+    position: relative;
+    z-index: 3;
+}
+
+#gs2 {
+    transform: translate(329px, -269px);
+    width: 36px;
+    height: 158px;
+    /* background-color: black; */
+    border-width: 2px;
+    border-color: black;
+    position: relative;
+    z-index: 3;
+}
+
+#as2 {
+    transform: translate(347px, -269px);
+    width: 36px;
+    height: 158px;
+    /* background-color: black; */
+    border-width: 2px;
+    border-color: black;
+    position: relative;
+    z-index: 3;
+}
+
+#cs3 {
+    transform: translate(416px, -269px);
+    width: 36px;
+    height: 158px;
+    /* background-color: black; */
+    border-width: 2px;
+    border-color: black;
+    position: relative;
+    z-index: 3;
+}
+
+#ds3 {
+    transform: translate(433px, -269px);
+    width: 36px;
+    height: 158px;
+    /* background-color: black; */
+    border-width: 2px;
+    border-color: black;
+    position: relative;
+    z-index: 3;
+}
+
+#fs3 {
+    transform: translate(503px, -269px);
+    width: 36px;
+    height: 158px;
+    /* background-color: black; */
+    border-width: 2px;
+    border-color: black;
+    position: relative;
+    z-index: 3;
+}
+
+#gs3 {
+    transform: translate(521px, -269px);
+    width: 36px;
+    height: 158px;
+    /* background-color: black; */
+    border-width: 2px;
+    border-color: black;
+    position: relative;
+    z-index: 3;
+}
+
+#as3 {
+    transform: translate(537px, -269px);
+    width: 36px;
+    height: 158px;
+    /* background-color: black; */
+    border-width: 2px;
+    border-color: black;
+    position: relative;
+    z-index: 3;
+}
+
+/******************************* HOVER SELECTORS FOR BUTTONS *******************************/
+
+.white button:hover {
+    background-color: lightskyblue;
+}
+
+.black button:hover {
+    background-color: lightskyblue;
+}
+
+/******************************* CHECKBOXES *******************************/
+
+.chordCheckBoxes {
+    display: none;
+}
+
+.scaleCheckBoxes {
+    display: none;
+}

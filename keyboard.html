@@ -1,0 +1,76 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="keyboardstyle.css" rel="stylesheet">
+    <script src="keyboardscript.js"> </script> 
+    <title>Keyboard</title>
+</head>
+<body>
+    <div class="white" id="whiteKeysDiv">
+        <button id="c1"/>
+        <button id="d1"/>
+        <button id="e1"/>
+        <button id="f1"/>
+        <button id="g1"/>
+        <button id="a1"/>
+        <button id="b1"/>
+        <button id="c2"/>
+        <button id="d2"/>
+        <button id="e2"/>
+        <button id="f2"/>
+        <button id="g2"/>
+        <button id="a2"/>
+        <button id="b2"/>
+        <button id="c3"/>
+        <button id="d3"/>
+        <button id="e3"/>
+        <button id="f3"/>
+        <button id="g3"/>
+        <button id="a3"/>
+        <button id="b3"/>
+    </div>
+    <div class="black" id="blackKeysDiv">
+        <button id="cs1"/>
+        <button id="ds1"/>
+        <button id="fs1"/>
+        <button id="gs1"/>
+        <button id="as1"/>
+        <button id="cs2"/>
+        <button id="ds2"/>
+        <button id="fs2"/>
+        <button id="gs2"/>
+        <button id="as2"/>
+        <button id="cs3"/>
+        <button id="ds3"/>
+        <button id="fs3"/>
+        <button id="gs3"/>
+        <button id="as3"/>
+    </div>
+    <h1 id="chord"></h1>
+    <button class="newChordButton" id="newChordButton">New Chord</button>
+    <h2 id="correctH2">Correct: 0</h2>
+    <h2 id="mistakesH2">Mistakes: 0</h2>
+    <div class="checkboxes" id="checkboxDiv">
+        <input type="checkbox" id="chords">Chords</input>
+        <div class="chordCheckboxes" id="chordCheckboxDiv">
+            <input type="checkbox" id="majCheckbox">Major</input>
+            <input type="checkbox" id="maj7Checkbox">Major 7th</input>
+            <input type="checkbox" id="minCheckbox">Minor</input>
+            <input type="checkbox" id="min7Checkbox">Minor 7th</input>
+            <input type="checkbox" id="domCheckbox">Dominant</input>
+            <input type="checkbox" id="dimCheckbox">Diminished</input>
+        </div>
+        <br />
+        <input type="checkbox" id="scales">Scales</input>
+        <div class="scaleCheckboxes" id="scaleCheckboxDiv">
+            <input type="checkbox" id="majScaleCheckbox">Major</input>
+            <input type="checkbox" id="minScaleCheckbox">Minor</input>
+            <input type="checkbox" id="majorBluesScaleCheckbox">Major Blues</input>
+            <input type="checkbox" id="minorBluesScaleCheckbox">Minor Blues</input>
+            <input type="checkbox" id="dorianScaleCheckbox">Dorian</input>
+        </div>
+    </div>
+</body>
+</html>
