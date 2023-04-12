@@ -96,7 +96,7 @@ function handleNoteClicked(note) {
     var numNotes;
     if(currentGuess[2] == 0) {
         numNotes = 3;
-        if(currentGuess[0] == 1 || currentGuess[0] == 3 || currentGuess[0] == 4 || currentGuess[0] == 6)
+        if(currentGuess[0] == 1 || currentGuess[0] == 3 || currentGuess[0] == 4 || currentGuess[0] == 6 || currentGuess[0] == 8)
             numNotes = 4;
     }
     else {
