@@ -90,23 +90,24 @@ function handleNoteClicked(note) {
         document.getElementById("mistakesH2").textContent = `Mistakes: ${numWrong}`;
         key.style.backgroundColor = "Red";
     }
-    // check if the chord has been fully guessed correctly
-    var numNotesInChord;
+
+    // check if the chord has been fully guessed correctly:
+    // figure out how many notes should be in our chord or scale
+    var numNotes;
     if(currentGuess[2] == 0) {
-        numNotesInChord = 3;
-        if(currentGuess[0] == 1 || currentGuess[0] == 3 || currentGuess[0] == 4)
-            numNotesInChord = 4;
+        numNotes = 3;
+        if(currentGuess[0] == 1 || currentGuess[0] == 3 || currentGuess[0] == 4 || currentGuess[0] == 6)
+            numNotes = 4;
     }
     else {
         if(currentGuess[0] == 2 || currentGuess[0] == 3)
-            numNotesInChord = 6;
+            numNotes = 6;
         else
-            numNotesInChord = 7;
+            numNotes = 7;
     }
-
     for(let k of currentClicked) {
         if(notesInChord.includes(k)) {
-            if(guessedCorrectly == numNotesInChord) { // chord has been guessed correctly
+            if(guessedCorrectly == numNotes) { // chord has been guessed correctly
                 // update statistics
                 numRight++;
                 document.getElementById("correctH2").textContent = `Correct: ${numRight}`;
